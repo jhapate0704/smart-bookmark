@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Bookmark",
+  "version": "1.0.0",
+  "description": "Creates smart bookmarks with AI-powered tagging.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
