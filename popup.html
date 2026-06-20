@@ -1,20 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Bookmarks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="popup.css">
 </head>
-<body>
-  <div class="header">
-    <h1>Smart Bookmarks</h1>
-    <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round"></div>
-      </label>
+<body class="dark">
+  <div id="iphone-screen">
+    
+    <!-- Dynamic Island -->
+    <div id="dynamic-island" class="island-collapsed">
+      <div id="island-default">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span id="island-count">0 Bookmarks</span>
+        <div class="status-dot"></div>
+      </div>
+      <div id="island-expanded" style="display: none;">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="island-search" placeholder="Search apps & bookmarks...">
+      </div>
     </div>
+
+
+    <!-- Home Screen App Grid -->
+    <main id="app-grid"></main>
+
+    <!-- Folder Modal Overlay -->
+    <div id="folder-overlay" class="hidden">
+      <div class="folder-panel">
+        <h2 id="folder-title">Folder Name</h2>
+        <div id="folder-grid"></div>
+      </div>
+    </div>
+
+    <!-- Context Menu (Long Press) -->
+    <div id="context-menu" class="hidden">
+      <button id="ctx-fav">
+        <span>Favorite</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </button>
+      <div class="divider"></div>
+      <button id="ctx-del" class="danger">
+        <span>Delete App</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      </button>
+    </div>
+
+    <!-- Bottom Dock -->
+    <div class="dock-container">
+      <div class="dock">
+        <div class="dock-icon active" id="dock-home" title="Home">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="dock-icon" id="dock-fav" title="Favorites">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="dock-icon" id="dock-import" title="Import">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="dock-icon" id="dock-export" title="Export">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+      </div>
+    </div>
+    
+    <input type="file" id="import-file" style="display: none;" accept=".json" />
   </div>
-  <div id="bookmarks-list"></div>
   <script src="popup.js"></script>
 </body>
 </html>
