@@ -57,10 +57,10 @@ body {
   z-index: 50; position: relative;
 }
 
-.island-collapsed { width: 150px; height: 36px; cursor: pointer; }
-.island-expanded { width: 360px; height: 50px; border-radius: 25px !important; }
+.island-collapsed { width: 150px; height: 55px; cursor: pointer; }
+.island-expanded { width: 300px; height: 50px; border-radius: 25px !important; }
 
-#island-default { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; transition: opacity 0.2s; }
+#island-default { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; transition: opacity 0.2s; }
 .status-dot { width: 6px; height: 6px; background: #34C759; border-radius: 50%; box-shadow: 0 0 6px #34C759; }
 
 #island-expanded { display: flex; align-items: center; width: 100%; height: 100%; padding: 0 16px; gap: 10px; transition: opacity 0.3s; }

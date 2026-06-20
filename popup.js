@@ -84,7 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
       filtered = bookmarksToRender;
     }
 
-    if(!insideFolder) islandCount.textContent = `${allBookmarks.length} Apps`;
+    if(!insideFolder) {
+      if (currentFilter === 'Favorites') {
+        islandCount.textContent = `${filtered.length} Favorites`;
+      } else {
+        islandCount.textContent = `${filtered.length} Apps`;
+      }
+    }
 
     // Grouping logic for "Folders" if not searching and current filter is ALL
     if(!bookmarksToRender && searchInput.value === '' && currentFilter === 'All' && !insideFolder) {
