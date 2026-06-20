@@ -1,7 +1,16 @@
-# Smart Bookmarks 📱✨
+# Smart Bookmark Chrome Extension📱✨
 
 A premium Google Chrome Extension that transforms your bookmarks into a stunning, native iOS 26 / VisionOS experience right inside your browser.
+## 📸 Preview
+<img width="1900" height="977" alt="Screenshot 2026-06-21 025746" src="https://github.com/user-attachments/assets/6004aa3a-a2ab-42e7-b1d7-47aa6e5600e5" />
+<div align="center">
 
+<img width="532" height="805" alt="Screenshot 2026-06-21 025830" src="https://github.com/user-attachments/assets/145e6bdc-4a72-4952-a7c7-4284edd21ba2" />
+
+
+  <img width="500" height="747" alt="Screenshot 2026-06-21 025901" src="https://github.com/user-attachments/assets/cf7dfb95-babd-47c2-8309-d5ed06c0ad62" />
+  
+</div>
 ## Features
 
 *   **Liquid Glass UI:** Features authentic `backdrop-filter` blurring, soft drop shadows, and deep spatial gradient backgrounds that perfectly mimic Apple's modern design language.
