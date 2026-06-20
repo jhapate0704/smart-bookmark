@@ -14,15 +14,24 @@
 
 body {
   font-family: -apple-system, 'SF Pro Display', 'Inter', sans-serif;
-  margin: 0; padding: 0; width: 400px; height: 650px;
-  background: #000; color: var(--text-primary);
+  margin: 0; padding: 0; width: 400px; height: 600px; /* Max popup height is 600px */
+  background: #1a1a1a; /* Dark box background outside the phone */
+  color: var(--text-primary);
   overflow: hidden; -webkit-font-smoothing: antialiased;
+  display: flex; align-items: center; justify-content: center;
 }
 
 #iphone-screen {
-  position: relative; width: 100%; height: 100%;
-  background: var(--bg-gradient); overflow: hidden;
+  position: relative; 
+  width: 370px; height: 570px; /* The physical iPhone screen */
+  background: var(--bg-gradient); 
   display: flex; flex-direction: column;
+  
+  /* The iPhone Hardware Case */
+  border-radius: 45px;
+  overflow: hidden;
+  border: 8px solid #000; /* Thick black screen bezel */
+  box-shadow: 0 0 0 2px #444, 0 15px 35px rgba(0,0,0,0.6); /* Metallic outer rim and drop shadow */
 }
 
 /* Ambient Lights */
@@ -126,7 +135,7 @@ body {
 
 /* Bottom Dock */
 .dock-container {
-  position: fixed; bottom: 15px; left: 15px; right: 15px; z-index: 40;
+  position: absolute; bottom: 15px; left: 15px; right: 15px; z-index: 40;
 }
 .dock {
   height: 70px; background: rgba(255,255,255,0.2);
