@@ -2,13 +2,15 @@
 
 A premium Google Chrome Extension that transforms your bookmarks into a stunning, native iOS 26 / VisionOS experience right inside your browser.
 ## 📸 Preview
-<img width="1900" height="977" alt="Screenshot 2026-06-21 025746" src="https://github.com/user-attachments/assets/6004aa3a-a2ab-42e7-b1d7-47aa6e5600e5" />
+
 <div align="center">
 
-<img width="532" height="805" alt="Screenshot 2026-06-21 025830" src="https://github.com/user-attachments/assets/145e6bdc-4a72-4952-a7c7-4284edd21ba2" />
+
+<img width="1536" height="1024" alt="ChromExtension-1" src="https://github.com/user-attachments/assets/6715fc4f-8cf1-44e9-b60c-3e214fa3ccc9" />
+
+<img width="1536" height="1024" alt="ChromExtension-2" src="https://github.com/user-attachments/assets/e7b4981d-fa6c-4da9-8c9e-2b732028ee89" />
 
 
-  <img width="500" height="747" alt="Screenshot 2026-06-21 025901" src="https://github.com/user-attachments/assets/cf7dfb95-babd-47c2-8309-d5ed06c0ad62" />
   
 </div>
 ## Features
